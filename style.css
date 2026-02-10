@@ -1,0 +1,169 @@
+body {
+  font-family: "Segoe UI", Tahoma, sans-serif;
+  background: linear-gradient(135deg, #d4f1d4, #f4fff4);
+  text-align: center;
+  padding: 20px;
+  color: #333;
+}
+
+h1 {
+  margin-bottom: 10px;
+  font-size: 32px;
+  color: #2e7d32;
+}
+
+.subtitle {
+  color: #666;
+  margin-bottom: 30px;
+}
+
+.cards {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-bottom: 30px;
+}
+
+.card {
+  background: #ffffff;
+  padding: 22px;
+  width: 190px;
+  border-radius: 14px;
+  font-size: 18px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.12);
+}
+
+.card span {
+  display: block;
+  font-size: 28px;
+  font-weight: bold;
+  margin-top: 8px;
+}
+
+.card.temp {
+  border-top: 6px solid #ff7043;
+}
+
+.card.humidity {
+  border-top: 6px solid #42a5f5;
+}
+
+.card.moisture {
+  border-top: 6px solid #66bb6a;
+}
+
+
+.soil-status {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.status {
+  padding: 6px 16px;
+  border-radius: 20px;
+  font-weight: bold;
+  color: white;
+  font-size: medium;
+  display: inline-flex;
+  align-items: center;
+}
+
+.status.dry {
+  background-color: #e53935;
+}
+
+.status.moist {
+  background-color: #2e7d32;
+}
+
+button {
+  padding: 12px 26px;
+  margin: 15px;
+  font-size: 16px;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  background: linear-gradient(45deg, #4CAF50, #2e7d32);
+  color: white;
+  box-shadow: 0 6px 15px rgba(67, 160, 71, 0.4);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 18px rgba(67, 160, 71, 0.6);
+}
+
+table {
+  width: 100%;
+  max-width: 750px;
+  margin: 30px auto;
+  border-collapse: collapse;
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+
+th,
+td {
+  padding: 14px;
+  text-align: center;
+}
+
+th {
+  background: #2e7d32;
+  color: white;
+  font-size: 16px;
+}
+
+tr:nth-child(even) {
+  background: #f4f9f4;
+}
+
+tr:hover {
+  background: #e8f5e9;
+}
+
+
+.badge {
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: bold;
+  display: inline-block;
+}
+
+.badge.dry {
+  background: #ffebee;
+  color: #c62828;
+}
+
+.badge.moist {
+  background: #e8f5e9;
+  color: #2e7d32;
+}
+
+@media (max-width: 600px) {
+  h1 {
+    font-size: 26px;
+  }
+
+  .cards {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card {
+    width: 90%;
+  }
+}

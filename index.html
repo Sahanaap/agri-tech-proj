@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Agri IoT Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <h1> 🌱 Farm Sensor Monitoring Dashboard</h1>
+
+  <div class="cards">
+    <div class="card">
+      Temperature<br>
+      <span id="temp">--</span> °C
+    </div>
+
+    <div class="card">
+      Humidity<br>
+      <span id="humidity">--</span> %
+    </div>
+
+    <div class="card">
+      Soil Moisture<br>
+      <span id="moisture">--</span> %
+    </div>
+  </div>
+
+  <h3 class="soil-status">
+    Soil Status :
+    <span id="status" class="status">--</span>
+  </h3>
+
+
+  <button onclick="generateData()">Generate Sensor Data</button>
+
+  <h2>Last 10 Sensor Readings</h2>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Temperature (°C)</th>
+        <th>Humidity (%)</th>
+        <th>Moisture (%)</th>
+        <th>Status</th>
+      </tr>
+    </thead>
+    <tbody id="tableBody">
+    </tbody>
+  </table>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
